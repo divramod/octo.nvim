@@ -129,8 +129,8 @@ function OctoBuffer:render_issue()
   local new_nodes = {}
   for i, node in ipairs(self.node.timelineItems.nodes) do
     local node_type = type(node)
-    local node_print = 'i: ' .. i .. " type: " .. type(node)
-    require "notify"(node_print, "info", { title = 'octo-buffer.lua: type(node)' })
+    -- local node_print = 'i: ' .. i .. " type: " .. type(node)
+    -- require "notify"(node_print, "info", { title = 'octo-buffer.lua: type(node)' })
     if node_type ~= 'userdata' then
       table.insert(new_nodes, node)
     end
